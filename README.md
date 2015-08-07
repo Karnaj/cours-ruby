@@ -8,3 +8,5 @@ Il est organisé ainsi :
 - Les fichiers de ces sous-dossiers correspondent à des extraits (numérotation de la forme 1-1-1)
 
 Les parties et les chapitres ont chacun une introduction et une conclusion, de même que le tutoriel en lui-même.
+
+N'hésitez pas à faire des remarques.
