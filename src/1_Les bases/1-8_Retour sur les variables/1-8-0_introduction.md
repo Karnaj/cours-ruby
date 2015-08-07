@@ -1,0 +1,1 @@
+C'est parti pour un nouveau chapitre. Ici, nous reviendrons aux variables en approfondissant ce que nous avons vu dans le second chapitre.

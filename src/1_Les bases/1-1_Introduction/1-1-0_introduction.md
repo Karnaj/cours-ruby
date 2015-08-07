@@ -1,0 +1,1 @@
+Dans ce chapitre, nous allons découvrir ce qu'est Ruby, comment l'installer, et nous ferons une courte introduction à sa syntaxe.

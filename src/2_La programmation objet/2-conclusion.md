@@ -1,0 +1,1 @@
+Nous avons pu voir comment créer et utiliser des classes, les mettre en oeuvre et les faire communiquer entre elles ! Nous avons l'air de rien déjà beaucoup appris et vous pouvez être fiers de vous ! Cependant, nous sommes loin d'en avoir terminé, le langage Ruby possède encore bien des trésors que nous verrons plus tard !

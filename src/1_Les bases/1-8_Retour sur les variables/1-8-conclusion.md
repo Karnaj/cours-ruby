@@ -1,0 +1,1 @@
+Ce chapitre très théorique est enfin fini. N'oubliez pas, les variables globales sont à proscrire dans la plupart des cas contrairement aux symboles qui sont très utiles quand ils sont très utilisés. D'ailleurs essayez de pratiquer ce que nous avons vu sur les symboles avec les hachages par exemple.

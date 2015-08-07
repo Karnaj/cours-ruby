@@ -1,0 +1,1 @@
+Après avoir eu un aperçu de la classe *Fixnum* qui sert à manipuler les "petits" nombres, nous allons continuer notre périple en nous intéressant aux tableaux, que nous avions déjà découvert au début du cours.

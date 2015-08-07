@@ -1,0 +1,1 @@
+Nous avons vu, jusqu'à présent, comment utiliser les bases du langage Ruby. Nous allons désormais nous intéresser à des concepts un peu plus complexes et appréhender la programmation objet. Dans un premier temps, nous réutiliserons ce que nous connaissons déjà et essaierons d'intégrer doucement le concept d'objet.

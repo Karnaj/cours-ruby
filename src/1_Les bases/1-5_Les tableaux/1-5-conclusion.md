@@ -1,0 +1,1 @@
+Ça y est, vous savez comment déclarer et écrire dans un tableau.

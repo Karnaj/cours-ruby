@@ -1,0 +1,1 @@
+Cette courte introduction à Ruby est maintenant terminée. Nous espérons qu'elle vous a plu. Si vous avez la moindre remarque ou commentaire, n'hésitez pas à envoyer un MP.

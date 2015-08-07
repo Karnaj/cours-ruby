@@ -1,0 +1,1 @@
+Dans la première partie de ce cours, vous apprendrez les bases du langage : les variables, les conditions, les boucles, les tableaux et les méthodes/fonctions.

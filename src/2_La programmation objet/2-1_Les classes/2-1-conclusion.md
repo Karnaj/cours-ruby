@@ -1,0 +1,1 @@
+Maintenant que nous savons ce qu'est une classe, nous allons pouvoir découvrir une toute nouvelle facette de ce que nous pensions connaitre de Ruby.

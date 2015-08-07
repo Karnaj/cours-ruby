@@ -1,0 +1,1 @@
+Dans un premier temps, nous allons parler de la pierre angulaire de la programmation objet en Ruby : *les classes*. Nous allons tout d'abord expliquer ce que c'est et un exemple de l'utilisation de l'une d'entre elles : *Fixnum*.

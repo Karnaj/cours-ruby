@@ -1,0 +1,1 @@
+Vous avez maintenant acquis de bonnes bases en Ruby.

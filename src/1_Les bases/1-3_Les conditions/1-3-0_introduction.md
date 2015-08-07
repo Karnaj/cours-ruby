@@ -1,0 +1,1 @@
+Dans ce chapitre nous apprendrons à créer des conditions. Ceci permettra d'adapter le déroulement de nos programmes à certains paramètres tel que la valeur des variables.

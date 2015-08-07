@@ -1,0 +1,1 @@
+Dans ce chapitre, nous allons voir un nouveau type de variables : les tableaux. Les tableaux sont un type bien spécial de variables puisqu'ils permettent de conserver en mémoire plusieurs valeurs plutôt qu'une.

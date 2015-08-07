@@ -1,0 +1,1 @@
+Dans ce chapitre, nous allons aborder un concept important dans tous les langages : les variables.
