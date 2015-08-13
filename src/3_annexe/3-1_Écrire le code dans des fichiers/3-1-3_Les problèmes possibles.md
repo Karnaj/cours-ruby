@@ -1,6 +1,3 @@
-# La console se ferme directement
-
-
 # Voir les erreurs obtenus
 
 Vous ne l'avez peut-être pas encore remarqué, mais écrivez un code erroné et essayez de l'exécuter en cliquant sur le fichier
@@ -35,5 +32,8 @@ test.rb
 
 [[attention]]
 | La commande `cd` est une commande bash. Elle n'est donc pas à utiliser dans irb, mais directement dans la console. 
+
+# La console se ferme directement
+
 
 # Le programme ne se lance pas
