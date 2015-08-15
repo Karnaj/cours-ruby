@@ -51,3 +51,4 @@ Ainsi, pour corriger les erreurs de votre code par exemple, il vaut mieux se dé
 
 # Le programme ne se lance pas
 
+Il peut aussi arriver que lorsque vous cliquiez sur le programme (ou l'exécutiez grâce au script de Notepad++ par exemple), celui-ci ne se lance pas ou encore que le fichier s'ouvre avec votre éditeur de texte ou un autre programme. Cela signifie tout simplement que le programme avec lequel les fichiers `rb` sont lancés n'est **pas** Ruby. Pour régler cela, il vous suffit donc de choisir l'interpréteur Ruby en tant que programme par défaut.  
