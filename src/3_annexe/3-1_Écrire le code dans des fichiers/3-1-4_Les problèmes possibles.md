@@ -40,13 +40,20 @@ Si en cliquant sur le programme, la console se ferme directement, c'est tout à 
 - utiliser la méthode du point précédent et ouvrir le programme en passant par la console (utiliser `cd` pour se rendre dans le dossier et l'exécuter)
 - demander au programme d'attendre par exemple une saisie de l'utilisateur
 
-Nous avosn déjà vu la première méthode, voyons maintenant la seconde. Elle n'est pas beaucoup plus compliquée (en fait, elle est même plus simple), il suffit d'utiliser `gets` à la fin de notre code. Comme cela, le programme attendra une saisie de l'utilisateur et se fermera dès qu'il l'utilisera. 
+Nous avons déjà vu la première méthode, voyons maintenant la seconde. Elle n'est pas beaucoup plus compliquée (en fait, elle est même plus simple), il suffit d'utiliser `gets` à la fin de notre code. Comme cela, le programme attendra une saisie de l'utilisateur et se fermera dès qu'il l'utilisera. Par exemple :
+
+```ruby
+a = "Bonjour"
+gets
+```
 
 [[attention]]
 | Utiliser `gets` ne fonctionne pas dans le cas d'un code eronné. En effet, dès que Ruby encontre une erreur dans le programme
 | , il l'arrête. 
 
-Ainsi, pour corriger les erreurs de votre code par exemple, il vaut mieux se déplacer dans le dossier de votre programme à l'aide de `cd` et exécuter le programme pour trouver les erreurs. Utilisez `gets` par exemple lorsque vous avez fini un programme et que vous voulez pouvoir l'utiliser directement (ou le passer un ami). Pour le moment, nous ne sommes pas dans ce cas et n'avons pas le niveau de faire des programmes nécessitant cela, mais dans quelques temps, nous pourrons déjà faire des petits scripts intéressants.
+Ainsi, pour corriger les erreurs de votre code par exemple, il vaut mieux se déplacer dans le dossier de votre programme à l'aide de `cd` et exécuter le programme pour trouver les erreurs. 
+
+Utilisez `gets` par exemple lorsque vous avez fini un programme et que vous voulez pouvoir l'utiliser directement (ou le passer un ami). Pour le moment, nous ne sommes pas dans ce cas et n'avons pas le niveau de faire des programmes nécessitant cela, mais dans quelques temps, nous pourrons déjà faire des petits scripts intéressants.
 
 
 # Le programme ne se lance pas
