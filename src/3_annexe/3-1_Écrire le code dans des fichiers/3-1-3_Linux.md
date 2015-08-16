@@ -1,1 +1,1 @@
-
+Si vous êtes sous Linux, vous disposez sûrement déjà d'un éditeur de texte avec coloration syntaxique et support du langage Ruby. S'il s'agit d'un éditeur que **vous** avez choisi, que vous avez l'habitude d'utilisrr et qui vous convient, ne le changez pas. Sinon, vous devriez vous intéresser au large panel de choix qui est disponoble sous Linux. Il y en a vraiment pour tous les goûts. Ici, nous allons vous présenter Gedit, un éditeur de texte très simple, qui propose juste le peu de fonctionnalités dont nous avons actuellement besoin.  
