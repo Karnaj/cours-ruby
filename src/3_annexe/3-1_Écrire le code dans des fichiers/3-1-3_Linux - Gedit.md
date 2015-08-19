@@ -14,17 +14,10 @@ Vous savez quoi faire pour l'installer. Nous vous laissons faire.
 [[attention]]
 | N'oubliez pas d'installer GTK pour obtenir Gedit avec la meilleure interface graphique.
 
+Une fois Gedit installé, lancez le et habituez vous à l'interface. La coloration est choisie en fonction de l'extension du fichier ouvert (la coloration pour le Ruby est donc associée au fichier `rb`), mais vous pouvez bien sûr choisir la coloration dans les paramètres de Gedit.
 
 # Exécuter le code
 
+La façon la plus simple d'exécuter le script Ruby est d'utiliser le terminal : on ouvre un terminal, on se rend dans le dossier du script (à l'aide la commende `cd`) et on utilise la commande `ruby nom_du_script.rb`.
 
-
-
-
-
-
-
-
-
-
-Vous pouvez bien sûr essayer d'autres éditeurs de texte. [geany](www.geany.org/) par exemple offre plus de fonctionnalités tout en restant assez simple et ergonomique, mais choisissez avant tout un éditeur qui vous plaît et qui vous permet de coder facilement.
+Vous pouvez bien sûr essayer d'autres éditeurs de texte. [geany](www.geany.org/) par exemple offre plus de fonctionnalités tout en restant assez simple et ergonomique, mais choisissez avant tout un éditeur qui vous plaît et qui vous permet de coder facilement. Essayez en plusieurs, lisez les avis des autres, faîtes vous vos propres avis et choisissez le vôtre.
