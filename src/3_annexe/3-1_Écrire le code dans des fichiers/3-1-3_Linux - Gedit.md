@@ -20,4 +20,4 @@ Une fois Gedit installé, lancez le et habituez vous à l'interface. La colorati
 
 La façon la plus simple d'exécuter le script Ruby est d'utiliser le terminal : on ouvre un terminal, on se rend dans le dossier du script (à l'aide la commende `cd`) et on utilise la commande `ruby nom_du_script.rb`.
 
-Vous pouvez bien sûr essayer d'autres éditeurs de texte. [geany](www.geany.org/) par exemple offre plus de fonctionnalités tout en restant assez simple et ergonomique, mais choisissez avant tout un éditeur qui vous plaît et qui vous permet de coder facilement. Essayez en plusieurs, lisez les avis des autres, faîtes vous vos propres avis et choisissez le vôtre.
+Vous pouvez bien sûr essayer d'autres éditeurs de texte. [Geany](www.geany.org/) par exemple offre plus de fonctionnalités tout en restant assez simple et ergonomique, mais choisissez avant tout un éditeur qui vous plaît et qui vous permet de coder facilement. Essayez en plusieurs, lisez les avis des autres, faîtes vous vos propres avis et choisissez le vôtre.
