@@ -10,5 +10,6 @@ Nous remercions également [baptisteguil](https://zestedesavoir.com/membres/voir
 
 Liste des contributeurs :
 
-- [baptisteguil](https://zestedesavoir.com/membres/voir/baptisteguil/), créateur du cours, et rédacteur. 
-- [Titi_Alone](http://zestedesavoir.com/membres/voir/Titi_Alone/), rédacteur de l'introduction
+- [baptisteguil](https://zestedesavoir.com/membres/voir/baptisteguil/), créateur du cours, et rédacteur ;
+- [Titi_Alone](http://zestedesavoir.com/membres/voir/Titi_Alone/), rédacteur de l'introduction ;
+- [quark67](https://zestedesavoir.com/membres/voir/quark67/), rédacteur d'une partie de l'annexe.
