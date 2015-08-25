@@ -3,7 +3,7 @@
 Nous allons maintenant nous intéresser à un problème : on passe une variable en paramètre à une fonction, comment faire pour que les modifications effectués sur la variable de la fonction affectent la variable que l'on a passé en argument. Un exemple de code pour voir le problème :
 
 ```ruby
-def incrementer a =
+def incrementer(a) =
    a = a + 1
 end
 
@@ -17,7 +17,7 @@ On aimerait que la valeur de `x` soit `7` après l'appel de la fonction `increme
 On pourrait alors se dire que c'est normal, qu'il suffit d'incrémenter `x` plutôt que `a` dans la fonction `incrementer` (et dans ce cas, l'arguement n'est plus nécessaire).
 
 ```ruby
-def incrementer =
+def incrementer
    x = x + 1
 end
 
@@ -38,18 +38,18 @@ Ainsi, dans la fonction `incrementer`, on essaie d'incrémenter la valeur de `x`
 Pour mieux voir le phénomène de portée, testez des codes de ce genre :
 
 ```ruby
-def f x =
+def f(x)
    x = x + 1 # Fonctionne car x existe étant un paramètre
    puts x
 end
 
-def g =
+def g
    x = 3 # On est obligé de déclarer x avant 
    x = x + 1
    puts x
 end
 
-def h x =
+def h(x)
    x = x + 1 
    puts x 
    return x # On retourne x
