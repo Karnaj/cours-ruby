@@ -70,4 +70,40 @@ Ce code nous montre qu'il est possible de faire la fonction incrémenter grâce 
 
 # Les variables globales
 
+Pour régler ce problème, nous pouvons utiliser une variable globale. Les variables globales sont des variables qui, contrairement aux variables locales, sont accessibles dans tout le programme. Pour déclarer une variable globale, il suffit de préfixer son nom du caractère `$`.
+
+```ruby
+$x # x est une variable globale
+```
+
+[[attention]]
+| Les variables `x` et `$x` sont bien sûr différentes.
+
+Ce code fonctionne donc :
+
+```ruby
+def afficher =
+   print $x
+end
+
+$x = "Voici une variable globale"
+afficher
+```
+
+Nous sommes maintenant capable de faire une fonction qui incrémente la variable globale `$x` :
+
+```ruby
+def incrementer 
+   $x = $x + 1
+end
+
+$x = 1
+incrementer
+print $x #affiche 2
+```
+
+Les variables globales vous semblent être une solution pertinente aux problèmes que vous pourrez avoir, et vous pensez sûrement à les utiliser tout le temps. Pourtant, leur utilisation peut s'avérer dangereuse et ne conduit pas à une bonne conception de programme. On peut presque toujours se passer des variables globales et c'est ce que nous ferons.
+
 # Variables globales réservées
+
+Il existe des variables globales dont le nom est réservé. Cela veut dire que vous ne pourrez pas utiliser ces noms de variables dans votre programme. Ces variables ont chacune leur utilité et nous pouvons utiliser les dans nos programmes. Voyons en quelques unes :
