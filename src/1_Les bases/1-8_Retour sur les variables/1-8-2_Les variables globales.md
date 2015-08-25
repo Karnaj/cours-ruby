@@ -33,7 +33,7 @@ Et ce code ne fonctionne pas, et nous obtenons une erreur. Cette erreur est due 
 
 On dit que ce sont des variables **locales**.
 
-Ainsi, dans la fonction `incrementer`, on essaie d'incrémenter la valeur de `x`, or `x` n'existe pas encore (et a donc la valeur `Nil`) et l'opération `Nil + 1` ne peut pas être faite.
+Ainsi, dans la fonction `incrementer`, on essaie d'incrémenter la valeur de `x`, or `x` n'existe pas encore (et a donc la valeur `nil`) et l'opération `nil + 1` ne peut pas être faite.
 
 Pour mieux voir le phénomène de portée, testez des codes de ce genre :
 
