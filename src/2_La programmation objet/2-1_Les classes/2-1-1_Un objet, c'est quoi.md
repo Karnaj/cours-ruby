@@ -13,6 +13,8 @@ Point :
     distance(autrePoint), renvoie un flottant
 ```
 
+Le principe de la programmation orienté objet est de créer des objets et de les faire intéragir entre eux plutôt que d'exécuter des instructions séquentiellement comme nous le faisions avant. 
+
 # Une affaire de vocabulaire
 
 Maintenant que nous savons ce qu'est un objet, il faut comprendre comment ils sont représentés en Ruby. Chaque objet appartient à une classe. Tout comme on dit qu'une variable a un type, un objet appartient à une classe. **C'est le même principe** (en fait les types des variables sont en fait des classes). Ainsi, pour pouvoir créer des points, il nous faudrait créer des variable de type *Point* (où *Point* serait la classe qui définit structurellement un point).
