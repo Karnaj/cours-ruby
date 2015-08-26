@@ -106,6 +106,17 @@ Les variables globales vous semblent être une solution pertinente aux problème
 
 # Variables globales réservées
 
-Il existe des variables globales dont le nom est réservé. Cela veut dire que vous ne pourrez pas utiliser ces noms de variables dans votre programme. Ces variables ont chacune leur utilité et nous pouvons utiliser les dans nos programmes. Certaines de ces variables sont utiles pour le débogage ou pour apporter d'autres fonctionnialités. D'autres ont des usages plus simples. Voyons en quelques unes :
+Il existe des variables globales dont le nom est réservé. Cela veut dire que vous ne pourrez pas utiliser ces noms de variables dans votre programme. Ces variables ont chacune leur utilité et nous pouvons utiliser les dans nos programmes. Certaines de ces variables sont utiles pour le débogage ou pour apporter d'autres fonctionnialités. D'autres ont des usages plus simples. Voyons les deux plus simples d'entre elles :
 
-- 
+- la variable `__FILE__` est une chaine de caractère qui représente le nom du fichier courant ;
+- la variable `__LINE__` est un entier qui représente la ligne du fichier courant que l'interpréteur est en train d'exécuter.
+
+On peut ainsi écrire ce petit script qui affiche juste le nom du fichier et la ligne à laquelle on se trouve :
+
+```ruby
+puts "Le fichier interprété est le fichier #{__FILE__} et nous somme actuellement à la ligne #{__LINE__}"
+puts "Nous sommes maintenant à la ligne #{__LINE__}"
+
+puts "Nous avons laissé une ligne vide dans le fichier, nous sommes à la ligne #{__LINE__}"
+```
+
