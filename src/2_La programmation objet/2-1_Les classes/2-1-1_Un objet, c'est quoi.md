@@ -15,8 +15,11 @@ Point :
 
 # Une affaire de vocabulaire
 
-Maintenant que nous savons ce qu'est un objet, il faut comprendre comment ils sont représentés en Ruby. Chaque objet appartient à une classe. Tout comme on dit qu'une variable a un type, un objet appartient à une classe. **C'est le même principe**. Ainsi, pour pouvoir créer des points, il nous faudrait créer des variable de type *Point* (où *Point* serait la classe qui définit structurellement un point).
+Maintenant que nous savons ce qu'est un objet, il faut comprendre comment ils sont représentés en Ruby. Chaque objet appartient à une classe. Tout comme on dit qu'une variable a un type, un objet appartient à une classe. **C'est le même principe** (en fait les types des variables sont en fait des classes). Ainsi, pour pouvoir créer des points, il nous faudrait créer des variable de type *Point* (où *Point* serait la classe qui définit structurellement un point).
 
+Une classe est donc un moule, un plan qui permet de construire des objets de cette classe. On donne à ce moule des caractéristiques particulières (typiquement les variables et les méthodes) ce qui nous permet, en utilisant ce moule, d'obtenir des objets appartenant à la classe désirée. On ne manipule pas la classe mais des objets de cette classe. On utilise la classe pour créer de nouveaux objets. 
+
+Lorsqu'on crée un objet, on dit qu'on crée une nouvelle **instance** de la classe (ou qu'on **instancie** la classe).  
 
 [[information]]
 | La création de classe faisant l'objet d'un autre chapitre, nous nous intéresserons pour l'instant à des classes préexistantes et la création d'objets à partir de ces classes (**l'instanciation**).
