@@ -106,4 +106,6 @@ Les variables globales vous semblent être une solution pertinente aux problème
 
 # Variables globales réservées
 
-Il existe des variables globales dont le nom est réservé. Cela veut dire que vous ne pourrez pas utiliser ces noms de variables dans votre programme. Ces variables ont chacune leur utilité et nous pouvons utiliser les dans nos programmes. Voyons en quelques unes :
+Il existe des variables globales dont le nom est réservé. Cela veut dire que vous ne pourrez pas utiliser ces noms de variables dans votre programme. Ces variables ont chacune leur utilité et nous pouvons utiliser les dans nos programmes. Certaines de ces variables sont utiles pour le débogage ou pour apporter d'autres fonctionnialités. D'autres ont des usages plus simples. Voyons en quelques unes :
+
+- 
