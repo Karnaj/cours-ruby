@@ -120,3 +120,4 @@ puts "Nous sommes maintenant à la ligne #{__LINE__}"
 puts "Nous avons laissé une ligne vide dans le fichier, nous sommes à la ligne #{__LINE__}"
 ```
 
+Nous avons dit que les variables globales étaient à éviter et c'est vrai. En fait, les seules variables globales dont l'utilisation est normale et tout à fait conseillée sont les variables globales réservées. Tout au long du tutoriel, nous en verrons d'autres, mais vous pouvez déjà vous renseigner sur elles et sur leur utilité. 
