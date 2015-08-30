@@ -72,3 +72,5 @@ z = nation.id2name # z = "fr"
 ```
 
 # Les symboles et les hachages
+
+Les symboles sont communément utilisés en tant que clés pour les hachages. 
