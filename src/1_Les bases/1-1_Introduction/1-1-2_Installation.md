@@ -31,7 +31,7 @@ $ sudo pacman -S ruby
 
 # Installation sous OS X
 
-Nous avons de la chance, depuis quelques versions, Ruby est installé de base su OS X. Vous n'avez donc rien à faire. Vous devez lancer la commande `ruby -v` dans votre terminal pour connaître la version qui est installé. 
+Nous avons de la chance, depuis quelques versions, Ruby est installé de base su OS X. Vous n'avez donc rien à faire. Vous devez juste lancer la commande `ruby -v` dans votre terminal pour connaître la version qui est installé. 
 
 ---
 
