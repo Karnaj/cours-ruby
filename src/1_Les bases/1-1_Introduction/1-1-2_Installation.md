@@ -9,13 +9,13 @@ Heureusement, nous allons vous expliquer pas à pas comment faire.
 
 Pour commencer, téléchargez la dernière version de RubyInstaller sur [cette page](http://rubyinstaller.org/downloads/).
 
-![Capture du site RubyInstaller](/media/galleries/572/cd437911-ea31-431a-969f-364e25008c06.jpg.960x960_q85.jpg)
+![Capture du site RubyInstaller](zestedesavoir.com/media/galleries/572/cd437911-ea31-431a-969f-364e25008c06.jpg.960x960_q85.jpg)
 Figure : Capture du site
 
 Ensuite, il vous suffit d’exécuter l'installateur téléchargé.
 Cliquez sur Suivant - Suivant - Installer en prenant soin de cocher les cases comme ci-dessous.
 
-![Exécutable](http://zestedesavoir.com/media/galleries/572/875c81c0-b79e-41a3-b494-b4fab7e04350.png.960x960_q85.jpg)
+![Exécutable](zestedesavoir.com/media/galleries/572/875c81c0-b79e-41a3-b494-b4fab7e04350.png.960x960_q85.jpg)
 Figure : Exécutable
 
 # Installation sous Linux
