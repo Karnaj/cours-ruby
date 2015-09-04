@@ -73,4 +73,11 @@ z = nation.id2name # z = "fr"
 
 # Les symboles et les hachages
 
-Les symboles sont communément utilisés en tant que clés pour les hachages. 
+Les symboles sont communément utilisés en tant que clés pour les hachages. Ainsi, il est courant de voir ceci :
+
+```ruby
+hachage = {:nom => "Nom"
+           :prenom => "Prenom"
+           :age => 18
+}
+```
