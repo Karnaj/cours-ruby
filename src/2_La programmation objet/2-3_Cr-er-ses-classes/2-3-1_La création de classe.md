@@ -35,4 +35,5 @@ Vous pourriez alors vous dire que si c'est une constante, tout le nom devrait ê
 
 # Les variables
 
+Il est maintenant temps de rajouter des variables à notre classe. 
 # Une bonne classe
