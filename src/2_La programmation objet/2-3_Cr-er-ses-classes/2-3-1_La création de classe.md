@@ -31,7 +31,7 @@ end
 
 On obtient une erreur : `class/module name must be CONSTANT`. Elle est très claire, le nom doit être une constante (et donc commencer par une majuscule). Ce n'est donc pas une lubie de programmeur, **les noms de classes doivent obligatoirement commencer par une majuscule**.
 
-Vous pourriez alors vous dire que si c'est une constante, tout le nom devrait être en majuscule, mais par convention cette fois, seule la première lettre prend une majuscule contrairement aux variables constantes. 
+Vous pourriez alors vous dire que si c'est une constante, tout le nom devrait être en majuscule (comme pour les noms de variables constantes), mais par convention cette fois, seule la première lettre prend une majuscule contrairement aux variables constantes. 
 
 # Les variables
 
