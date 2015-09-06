@@ -65,11 +65,7 @@ Naviguez dans `/Application Support/TextWrangler/Scripts` et placez-y le fichier
 ![Emplacement où il convient de placer « ruby.sh » afin qu'il soit accessible à partir de TextWrangler](http://zestedesavoir.com/media/galleries/2109/029ab514-8fd5-44c8-807c-c919ffd97906.png.960x960_q85.png)
 Figure : Emplacement où il convient de placer « ruby.sh » afin qu'il soit accessible à partir de TextWrangler
 
-Désormais, lorsque vous voudrez exécuter votre code Ruby, il vous suffira de vous rendre dans le menu **Scripts** (symbolisé par une feuille enroulée en forme de S, tel un parchemin :
-
-![](http://zestedesavoir.com/media/galleries/2109/7832782a-f950-4590-b8ea-4b21618f0d75.png.960x960_q85.png)) 
-
-de la barre de menus, et d'y choisir « ruby ». Cela placera l'application Terminal au premier plan et vous pourrez y voir votre code Ruby s'exécuter.
+Désormais, lorsque vous voudrez exécuter votre code Ruby, il vous suffira de vous rendre dans le menu **Scripts** (symbolisé par une feuille enroulée en forme de S, tel un parchemin : ![](http://zestedesavoir.com/media/galleries/2109/7832782a-f950-4590-b8ea-4b21618f0d75.png.960x960_q85.png)) de la barre de menus, et d'y choisir « ruby ». Cela placera l'application Terminal au premier plan et vous pourrez y voir votre code Ruby s'exécuter.
 
 ![Le menu Script dans la barre des menus.](http://zestedesavoir.com/media/galleries/2109/c0936d97-81bb-48f4-aa1c-22b5ef28fb23.png.960x960_q85.png)
 Figure : Le menu Script dans la barre des menus.
