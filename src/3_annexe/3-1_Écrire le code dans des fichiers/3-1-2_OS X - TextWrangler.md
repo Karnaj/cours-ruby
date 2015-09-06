@@ -14,54 +14,81 @@ C'est pourquoi nous recommandons aux utilisateurs avancés de le télécharger d
 
 # Exécuter le code
 
-Pour lancer le code écrit, il convient de l'enregistrer avec l'extension .rb. On peut ensuite le lancer dans l'application Terminal[^appterm] en y tapant `ruby␣` (le ␣ symbolise un caractère espace) suivi du chemin du fichier (ou en faisant glisser le fichier à la suite de la position du curseur dans le Terminal). Mais, même si certains s'en accomodent, c'est un peu lourd et les developeurs sont connus pour être paresseux. Pourquoi ne pas automatiser cela ?
+Pour lancer le code écrit, il convient de l'enregistrer avec l'extension .rb. On peut ensuite le lancer dans l'application Terminal[^appterm] en y tapant `ruby␣` (le ␣ symbolise un caractère espace) suivi du chemin du fichier (ou en faisant glisser le fichier à la suite de la position du curseur dans le Terminal). Mais, même si certains s'en accommodent, c'est un peu lourd et les développeurs sont connus pour être paresseux. Pourquoi ne pas automatiser cela ?
 
 ## Automatisation de l'exécution du code par un script
 
-L'application TextWrangler dispose d'une commande intégrée. Avec le code Ruby affiché devant vous, il vous suffit d'aller dans le menu **#!** (menu shebang) et d'y sélectionner « Run in Terminal » (les autres options d'exécution ne permettent pas de lancer un code demandant une saisie de l'utilisateur, vous ne pourrez pas entrer de donnée au clavier lors de l'exécution). Mais cette méthode intégrée ouvre une nouvelle fenêtre de Terminal par exécution de code. C'est pourquoi nous préconisons une autre méthode.
+L'application TextWrangler dispose d'une commande intégrée. Avec le code Ruby affiché devant vous, il vous suffit d'aller dans le menu **#!** (menu shebang) et d'y sélectionner « Run in Terminal » (les autres options d'exécution ne permettent pas de lancer un code demandant une saisie de l'utilisateur, vous ne pourrez pas entrer de donnée au clavier lors de l'exécution).
 
-Nous allons configurer le logiciel afin d'avoir quelque chose de plus plaisant. Dans TextWrangler, créez un nouveau document et copiez-y scupuleusement ce code (attention, la seconde ligne est très longue, allez jusqu'au bout) :
+![On prend comme exemple le code situé à la page : https://zestedesavoir.com/tutoriels/373/une-introduction-a-ruby/497/les-bases/2489/les-conditions-et-les-boucles/#2-if-else](http://zestedesavoir.com/media/galleries/2109/fc6ccf91-ff78-4a47-8845-11eaee2d37ec.png.960x960_q85.png)
+
+![Le menu « shebang » dans la barre des menus](http://zestedesavoir.com/media/galleries/2109/8d823719-b924-4711-90bb-a2afa2226360.png.960x960_q85.png) <-- BUG (du moins dans la prévisualisation de messages du forum de ZdS : la légende ne s'affiche pas et l'image n'est pas centrée -->
+
+![L'article de menu « Run in Terminal »](http://zestedesavoir.com/media/galleries/2109/69d277b1-dcdb-4803-8a2e-c1dd5e2187db.png.960x960_q85.png)
+
+![Lancement du code Ruby dans le Terminal. Il est demandé de saisir un âge.](http://zestedesavoir.com/media/galleries/2109/712198b5-aedc-402c-86e9-e819ded07839.png.960x960_q85.png)
+
+![Quand le code est fini d'être exécuté, on ne peut rien faire de plus dans la fenêtre ouverte.](http://zestedesavoir.com/media/galleries/2109/ddc584ec-3571-4c31-8f1b-1de723167d6c.png.960x960_q85.png)
+
+Mais cette méthode intégrée ouvre une nouvelle fenêtre de Terminal par exécution de code. C'est pourquoi nous préconisons une autre méthode.
+
+Nous allons configurer le logiciel afin d'avoir quelque chose de plus plaisant. Dans TextWrangler, créez un nouveau document et copiez-y scrupuleusement ce code (attention, la seconde ligne est très longue, allez jusqu'au bout) :
 
 ````bash
 #!/bin/bash
-export BB_DOC_PATH;osascript -e 'on run argv' -e 'tell application "Terminal"' -e 'activate' -e 'if ((count of (windows where visible is true)) = 0) then do script ""' -e 'do script "ruby "& (item 1 of argv) in window 1' -e 'end tell' -e 'end run' $BB_DOC_PATH
+osascript -e 'on run argv' -e 'tell application "Terminal"' -e 'activate'  -e 'delay 0.5' -e 'if ((count of (windows where visible is true)) = 0) then do script ""' -e 'do script "ruby "& (item 1 of argv) in window 1' -e 'end tell' -e 'end run' $BB_DOC_PATH > /dev/null 2>&1
 ````
 
-(`BB_DOC_PATH` est une variable d'environnement du logiciel TextWrangler (BB correspondant à Barebones, l'éditeur) qui permet à un script shell d'avoir le chemin d'accès au document ouvert au premier plan)
+[[information]]
+| Des explications sur le code sont disponible à la fin de cette section.
 
-Enregistrez ce document sous le nom `ruby.sh`. Allez dans le Finder. Choisissez le menu **Aller** avec la touche ||alt|| enfoncée. Ceci vous permettra d'accéder au dossier Bibliothèque (par défaut caché) de votre compte utilisateur. Naviguez dans `/Application Support/TextWrangler/Scripts` et placez-y le fichier `ruby.sh` que vous venez de créer.
 
-Désormais, lorsque vous voudrez exécuter votre code Ruby, il vous suffira de vous rendre dans le menu **Scripts** (symbolisé par une feuille enroulée en forme de S, tel un parchemin) de la barre de menus, et d'y choisir « ruby ». Cela placera l'application Terminal au premier plan et vous pourrez y voir votre code Ruby s'exécuter.
 
-Vous remarquerez que TextWrangler affiche une fenêtre de log (consigne dans un journal) les appels au fichier `ruby.sh`. Toutefois les éventuelles erreurs survenant lors de l'exécution du code Ruby n'apparaitront pas dans ce fichier de log, mais directement dans la fenêtre du Terminal. Si l'affichage de ce fichier de log est plus une contrainte qu'une utilité à vos yeux, vous pouvez utiliser une méthode alternative, détaillée dans la suite, par défaut masquée (le code AppleScript, qui est aussi employé dans le script shell précédent, sera expliqué).
+Enregistrez ce document sous le nom `ruby.sh`. 
+
+![Le code bash qui permet de lancer un code Ruby dans le Terminal](http://zestedesavoir.com/media/galleries/2109/c5ffea0a-9de1-42ac-9ea7-9fdf2fa3fd9f.png.960x960_q85.png)
+
+Allez dans le Finder. Choisissez le menu **Aller** avec la touche ||alt|| enfoncée. Ceci vous permettra d'accéder au dossier Bibliothèque (par défaut caché) de votre compte utilisateur. 
+
+![Le dossier Bibliothèque ne s'affiche qu'en conjonction avec la touche « alt », pour éviter que des utilisateurs inexpérimentés y effacent des fichiers importants.](http://zestedesavoir.com/media/galleries/2109/815a9d45-7aad-4d8a-b81a-e2fe555c867f.png.960x960_q85.png)
+
+Naviguez dans `/Application Support/TextWrangler/Scripts` et placez-y le fichier `ruby.sh` que vous venez de créer.
+
+![Emplacement où il convient de placer « ruby.sh » afin qu'il soit accessible à partir de TextWrangler](http://zestedesavoir.com/media/galleries/2109/029ab514-8fd5-44c8-807c-c919ffd97906.png.960x960_q85.png)
+
+Désormais, lorsque vous voudrez exécuter votre code Ruby, il vous suffira de vous rendre dans le menu **Scripts** (symbolisé par une feuille enroulée en forme de S, tel un parchemin : ![](http://zestedesavoir.com/media/galleries/2109/7832782a-f950-4590-b8ea-4b21618f0d75.png.960x960_q85.png)) de la barre de menus, et d'y choisir « ruby ». Cela placera l'application Terminal au premier plan et vous pourrez y voir votre code Ruby s'exécuter.
+
+![Le menu Script dans la barre des menus.](http://zestedesavoir.com/media/galleries/2109/c0936d97-81bb-48f4-aa1c-22b5ef28fb23.png.960x960_q85.png)
+
+![On sélectionne l'article « ruby » pour lancer le code Ruby dans le Terminal.](http://zestedesavoir.com/media/galleries/2109/89937995-3396-4628-b304-a67f3d47f1d2.png.960x960_q85.png)
+
+[[information]]
+| La fenêtre *Preferences* de TextWrangler permet, dans sa section « Menus & Shortcuts » de spécifier un raccourci clavier pour l'appel du script « ruby.sh » (cliquez sur la ligne « Scripts » puis double-cliquez sur le mot « none » grisé en face de « ruby » pour placer un raccourci clavier non utilisé dans d'autres articles de menus).
+
+Les explications du code suivent :
 
 [[secret]]
-| Une alternative consiste à lancer un script AppleScript plutôt qu'un script shell. Ouvrez l'application « Éditeur de script »[^nomAS], créez un nouveau document (||cmd||+||N||) et placez-y ce code :
-|
+| Nous exécutons un script bash qui appelle un script AppleScript, exécuté avec la commande `osascript` (OSA : Open Scripting Architecture[^OSA]). AppleScript est un langage à la syntaxe proche de l'anglais parlé. On peut y ajouter des mot-clés sans signification comme « the » pour rendre le langage encore plus naturel : **tell the application "TextWrangler"**. 
+| 
+| La commande `osascript` demande à ce que chaque ligne individuelle d'un script AppleScript soit séparée par une option `-e` dont l'argument est la ligne de code AppleScript. Pour simplifier la compréhension, nous présentons le code AppleScript sous sa forme standard :
+| 
 | ````applescript
-| tell application "TextWrangler"
-|	set fichier to file of window 1
-| end tell
-|
-| tell application "Finder"
-| 	set chemin to POSIX path of fichier
-| end tell
-|
-| tell application "Terminal"
-|	activate
-|   if ((count of (windows where visible is true)) = 0) then do script ""
-|	do script "ruby " & quoted form of chemin in window 1
-| end tell
+| on run argv
+|   tell application "Terminal"
+|     activate
+|     delay 0.5
+|     if ((count of (windows where visible is true)) = 0) then do script ""
+|     do script "ruby "& (item 1 of argv) in window 1
+|   end tell
+| end run
 | ````
 |
-| Allez dans **Fichier**>**Enregistrer...** et gardez le format de fichier Script. Nommez le fichier `ruby-AS.scpt` par exemple. Placez ce fichier au même emplacement que le fichier `ruby.sh` vu précédemment. Désormais, dans TextWrangler, lorsque vous voudrez exécuter votre fichier Ruby, il vous suffira d'aller comme précédemment dans le menu **Script** mais cette fois d'y sélectionner « ruby-AS ». Vous n'aurez pas cette fois l'inconvénient de la fenêtre de log qui se rajoute dans TextWrangler.
-|
-| [[information]]
-| | Voici quelques explications sur le code AppleScript proposé. Il s'agit d'un langage à la syntaxe proche de l'anglais parlé. On peut y ajouter des mot-clés sans signification comme « the » pour rendre le langage encore plus naturel : **tell the application "TextWrangler"**. Dans un premier temps, on place dans la variable `fichier` l'objet correspondant au fichier ruby au premier plan. Puis on place, via l'explorateur de fichier d'OS X **Finder.app**, le chemin Unix du fichier dans la variable `chemin`. Ensuite, on appelle l'application Terminal.app, on l'active afin de la placer au premier plan, et on comptabilise le nombre de fenêtres visibles déjà ouvertes (certaines applications ont des fenêtres qui peuvent être invisibles à un moment donné). S'il n'y a aucune fenêtre visible ouverte, on en crée une (normalement, le code serait « make new window », mais un bug de longue date empêche son utilisation dans l'application Terminal. La solution de contournement est de demander l'exécution d'un script shell vide sans préciser dans quelle fenêtre ça sera exécuté, de sorte que ça le fasse dans une nouvelle fenêtre). Ceci est important, car la suite du code demande l'exécution du code Ruby dans la fenêtre au premier plan. L'absence de fenêtre au premier plan provoquerait une erreur.
-| |
-| |  Dans le code du script de l'autre méthode, la variable `argv` reçoit les paramètres de la commande osascript (OSA : Open Scripting Architecture[^OSA]) sous forme de liste ordonnée. Ainsi, `argv` reçoit une liste d'un élément, `$BB_DOC_PATH`. Le premier (et seul) élément de cette liste sera donc : `item 1 of argv`.
- 
+| La commande `osascript` peut recevoir des arguments à la fin de sa liste d'options. Ceci nous permet de fournir au code AppleScript le chemin d'accès au fichier Ruby à exécuter. En effet, le logiciel TextWrangler fourni une variable d'environnement `BB_DOC_PATH` dont la valeur est `$BB_DOC_PATH` (BB correspondant à Bare Bones, le développeur du logiciel) qui permet à un script shell d'avoir le chemin d'accès au document ouvert au premier plan. Le code AppleScript reçoit les arguments sous forme d'une liste ordonnée, et celle-ci est accessible par la variable `argv` du code. Le code fait appel à l'application Terminal (ce qui provoque son ouverture le cas échéant). Si l'application était déjà ouverte, mais en arrière-plan, `activate` la place au premier plan. On place le script en pause durant 0,5 seconde. Si on ne le faisait pas, la ligne suivante, qui compte le nombre de fenêtres visibles -- certaines applications ont des fenêtres qui peuvent être invisibles à un moment donné, comme des fenêtres de préférences -- de l'application Terminal serait faussée dans le cas où l'application vient d'être ouverte : il y a un petit laps de temps entre l'ouverture de l'application et l'affichage de sa fenêtre. Par sécurité, on met un délai de 0,5 seconde probablement largement supérieur à la valeur nécessaire. S'il n'y a aucune fenêtre visible ouverte, on en crée une (normalement, le code serait « make new window », mais un bug de longue date empêche son utilisation dans l'application Terminal. La solution de contournement est de demander l'exécution d'un script shell vide sans préciser dans quelle fenêtre ça sera exécuté, de sorte que ça le fasse dans une nouvelle fenêtre). Ceci est important, car la suite du code demande l'exécution du code Ruby dans la fenêtre au premier plan. L'absence de fenêtre au premier plan provoquerait une erreur. Enfin, on lance le script Ruby en fournissant son chemin d'accès, contenu dans la variable `argv` constitué d'une liste qui ici ne contient qu'un seul élément (donc on en extrait la valeur avec `item 1 of argv`). Enfin, on termine le code par un petit raffinement, en redirigeant les messages de sortie et d'erreur de la commande `osascript` vers nulle part, via `> /dev/null 2>&1`. Si on ne le faisait pas, TextWrangler intercepterait ces messages et les afficherait dans une fenêtre telle que celle-ci :
+| 
+| ![La fenêtre de journalisation (log) des messages des scripts shell tels que « ruby.sh ».](http://zestedesavoir.com/media/galleries/2109/9f1561ad-419d-4f17-a941-217da8aee7ac.png.960x960_q85.png) <-- BUG ! La légende ne s'affiche pas -->
+| 
+| Toutefois les éventuelles erreurs survenant lors de l'exécution du code Ruby n'apparaitront pas dans ce fichier de log, mais directement dans la fenêtre du Terminal. C'est pourquoi nous avons considéré que son affichage était inutile.
 
-[^appterm]: l'application se trouve dans le dossier `/Applications/Utilitaires` d'OS X.
-[^nomAS]: l'application, dans les versions plus anciennes d'OS X, se nommait « Éditeur AppleScript », mais son interface est globalement la même, de sorte que vous ne serez pas dépaysé si vous ne disposez pas d'OS X Yosemite ou ultérieur. Elle se trouve dans le même dossier que l'application Terminal.
+[^appterm]: L'application se trouve dans le dossier `/Applications/Utilitaires` d'OS X.
+
 [^OSA]: https://developer.apple.com/library/mac/documentation/AppleScript/Conceptual/AppleScriptX/Concepts/osa.html
