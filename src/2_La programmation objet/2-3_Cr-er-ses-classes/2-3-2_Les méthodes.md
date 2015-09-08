@@ -47,6 +47,25 @@ a.bonjour "utilisateur"
 a.eteindre
 ```
 
+Les méthodes d'instances ne sont vraiment rien d'autres que des méthodes placées dans une classe. Une des seules chose que vous avez besoin de savoir en plus c'est comment appeler une méthode de la classe... Dans une autre méthode de la classe. Par exemple, faisons une fonction `quitter` de paramètre `prenom` qui dise au revoir à `prenom` et appelle ensuite la fonction `eteindre`. Essayons ceci :
+
+```ruby
+def quitter(prenom = "le monde")
+   puts "Au revoir #{prenom}."
+   eteindre
+end
+```
+
+Et ça fonctionne. Cependant, la plupart du temps, nous allons utiliser le mot-clé `self` de cette manière :
+
+```ruby
+def quitter(prenom = "le monde")
+   puts "Au revoir #{prenom}."
+   self.eteindre
+end
+```
+
+Ce mot-clé permet de faire référence à l'objet qui appelle la méthode. Ainsi, lorsuqe nous utilisons `a.quitter`, dans la méthode `quitter`, `self.eteindre` équivaudra à `a.eteindre`.
 
 # La méthode `initialize`
 
