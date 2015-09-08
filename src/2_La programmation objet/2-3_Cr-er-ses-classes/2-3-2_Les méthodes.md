@@ -7,6 +7,7 @@ class Ordinateur
    def allumer
       puts "Allumage en cours." 
    end
+   
    def eteindre
       puts "Extinction en cours."
    end
@@ -19,6 +20,30 @@ Et donc, nous pouvons créer une instance d'`Ordinateur`, l'allumer, puis l'éte
 a = Ordinateur.new
 a.allumer
 puts "Maintenant que nous avons allumé l'ordinateur, nous pouvons faire tout plein d'opérations."
+a.eteindre
+```
+
+Vous savez alors commen faire des fonctions avec paramètres (facultatif ou non), qui retournent une valeur...
+
+```ruby
+class Ordinateur
+   def allumer
+      puts "Allumage en cours." 
+   end
+   
+   def eteindre
+      puts "Extinction en cours."
+   end
+   
+   def bonjour(prenom = "le monde")
+      puts "bonjour #{prenom}."
+   end
+end
+
+a = Ordinateur.new
+a.allumer
+a.bonjour
+a.bonjour "utilisateur"
 a.eteindre
 ```
 
