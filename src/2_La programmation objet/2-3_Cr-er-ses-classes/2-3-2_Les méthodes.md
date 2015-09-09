@@ -56,7 +56,7 @@ def quitter(prenom = "le monde")
 end
 ```
 
-Et ça fonctionne. Cependant, la plupart du temps, nous allons utiliser le mot-clé `self` de cette manière :
+Et ça fonctionne. Cependant, la plupart du temps, nous allons utiliser le mot-clé `self` :
 
 ```ruby
 def quitter(prenom = "le monde")
@@ -65,7 +65,7 @@ def quitter(prenom = "le monde")
 end
 ```
 
-Ce mot-clé permet de faire référence à l'objet qui appelle la méthode. Ainsi, lorsuqe nous utilisons `a.quitter`, dans la méthode `quitter`, `self.eteindre` équivaudra à `a.eteindre`.
+Ce mot-clé permet de faire référence à l'objet qui appelle la méthode. Ainsi, lorsque nous utilisons `a.quitter`, dans la méthode `quitter`, `self.eteindre` équivaudra à `a.eteindre`.
 
 # La méthode `initialize`
 
