@@ -67,6 +67,8 @@ end
 
 Ce mot-clé permet de faire référence à l'objet qui appelle la méthode. Ainsi, lorsque nous utilisons `a.quitter`, dans la méthode `quitter`, `self.eteindre` équivaudra à `a.eteindre`.
 
-# La méthode `initialize`
-
 # Des méthodes d'accès aux variables
+
+Il est maintenant temps de voir comment modifier les variables de nos objets. 
+
+# La méthode `initialize`
