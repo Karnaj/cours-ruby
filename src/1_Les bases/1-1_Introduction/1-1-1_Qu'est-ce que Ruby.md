@@ -12,10 +12,10 @@ Un **langage de programmation** est un langage destiné à écrire des **program
 En effet, votre ordinateur, lui, ne comprend que les suites **binaires** (les suites de 1 et de 0).
 Comme écrire en binaire n’est pas à la portée de n'importe qui, certains ont décidé de créer ce que l'on appelle des langages de programmation, des langages servant d’intermédiaires. Le **code informatique** écrit dans l'un de ces langages est ensuite transformé en code binaire, compréhensible par la machine.
 
-Il existe deux grandes catégories de langages : 
+Il existe deux grandes catégories de langages. 
 
-- les **langages compilés** : vous écrivez du code, le code passe par un compilateur et ce compilateur génère un **exécutable** qui peut ensuite être exécuté par votre ordinateur
-- les **langages interprétés** : vous écrivez du code et le code doit être lancé dans ce que l'on appelle une **machine virtuelle**, il n'y a pas d’exécutable de créé
+- Les **langages compilés** : vous écrivez du code, le code passe par un compilateur et ce compilateur génère un **exécutable** qui peut ensuite être exécuté par votre ordinateur.
+- Les **langages interprétés** : vous écrivez du code et le code doit être lancé dans ce que l'on appelle une **machine virtuelle**, il n'y a pas d’exécutable de créé.
 
 Ruby est un langage interprété. Nous aurons donc besoin d'une machine virtuelle pour l'exécuter. Sans elle, les programmes ne fonctionneront pas. Cela signifie également que si vous voulez distribuer un programme écrit en Ruby, il faudra que les personnes qui utilisent votre ordinateur aient cette machine virtuelle d'installé (cette machine virtuelle **est** en fait Ruby). Ils devront donc télécharger et installer Ruby (ou vous devrez distribuer Ruby avec votre programme). 
 
