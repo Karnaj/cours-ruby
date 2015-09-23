@@ -101,8 +101,15 @@ end
 
 ordi = Ordinateur.new
 ordi.set_h 800
-print ordi.get_h
+print "La hauteur de l'écran est #{ordi.get_h}"
 ```
 
+Et là pas d'erreur, on obtient bien : 
+
+```
+La hauteur de l'écran 
+```
+
+Vous devez donc retenir que pour accéder aux variables de vos objets, il vous faut utiliser des classes. Notez que le chapitre suivant sera consacré à cela et vous permettra d'accéder à vos variables en écrivat moins de code et de façon plus efficace. 
 
 # La méthode `initialize`
