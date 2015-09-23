@@ -113,3 +113,56 @@ La hauteur de l'écran
 Vous devez donc retenir que pour accéder aux variables de vos objets, il vous faut utiliser des classes. Notez que le chapitre suivant sera consacré à cela et vous permettra d'accéder à vos variables en écrivat moins de code et de façon plus efficace. 
 
 # La méthode `initialize`
+
+Posons nous une petite question sur la classe `Ordinateur` précédente : lorsque j'instancie un objet de cette classe, quelle est la valeur donnée à `h` ? Affichons la pour voir :
+
+
+```ruby
+class Ordinateur
+   @h
+   
+   def get_h 
+      @h
+   end
+   
+   def set_h valeur 
+      @h = valeur
+   end
+end
+
+ordi = Ordinateur.new
+print "La hauteur de l'écran est #{ordi.get_h}"
+```
+
+Résultat : aucun nombre n'est affiché. 
+
+C'est quand même embêtant. On aimerait bien que lorsqu'un nouvel `Ordinateur`, il ait une hauteur par défaut, ou encore mieux on aimerait pouvoir lui donner une hauteur à sa création. En fait, on aimerait bien pouvoir faire automatiquement des opérations sur l'objet dès sa création. Pour ce faire, nous allons utiliser une méthode spéciale, la méthode `initialize`. Cette méthode permet de définir le comportement par défaut d'un objet à sa création. Elle est appelée dès que l'objet est créé. Il s'agit d'un **constructeur**. 
+
+Utilisons donc cette méthode pour donner une valeur à nos variables et afficher un message informant qu'un objet de la classe `Ordinateur` est créé :
+
+```ruby
+class Ordinateur
+   @h
+   
+   def initialize(h = 600)
+      @h = h
+      puts "Un ordinateur est créé."
+   end
+   
+   def get_h 
+      @h
+   end
+   
+   def set_h valeur 
+      @h = valeur
+   end
+end
+```
+
+Si on tape `ordi = Ordinateur.new`, un ordinateur avec `@h = 600` sera instancié et le message sera affiché. 
+
+Si on tape `ordi = Ordinateur.new(h = 800)`, le message sera aussi affiché, mais on aura pour cet ordinateur `@h = 800`.
+
+
+
+
