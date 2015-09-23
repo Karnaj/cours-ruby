@@ -69,6 +69,40 @@ Ce mot-clé permet de faire référence à l'objet qui appelle la méthode. Ains
 
 # Des méthodes d'accès aux variables
 
-Il est maintenant temps de voir comment modifier les variables de nos objets. 
+Il est maintenant temps de voir comment modifier les variables de nos objets. Une première idée serait qu'on peut y accéder en utilisant le symbole `.` :
+
+```ruby
+class Ordinateur
+   @h 
+end
+
+ordi = Ordinateur.new
+ordi.h = 32 # Erreur
+print ordi.h # Erreur également
+```
+
+[[erreur]]
+| On ne peut pas accéder aux informations d'un objet de cette manière.
+
+Cela est dû à ce que l'on appelle **l'encapsulation**. Il s'agit d'un principe en programmation orienté objet. Il consiste en gros à rassembler les données dans une structure (ce que nous faisons avec les objets) et à masquer ces données, en les rendant accessibles uniquement à l'intérieur de l'objet lui-même. Ainsi, nous ne pouvons pas avoir accès à la variable `h` de notre objet `ordi` **à l'extérieur** de notre classe. Il nous faut donc utiliser des méthodes **à l'intérieur** de notre classe qui se chargeront de renvoyer ou de modifier les variables. Par exemple :
+
+```ruby
+class Ordinateur
+   @h
+   
+   def get_h 
+      @h
+   end
+   
+   def set_h valeur 
+      @h = valeur
+   end
+end
+
+ordi = Ordinateur.new
+ordi.set_h 800
+print ordi.get_h
+```
+
 
 # La méthode `initialize`
