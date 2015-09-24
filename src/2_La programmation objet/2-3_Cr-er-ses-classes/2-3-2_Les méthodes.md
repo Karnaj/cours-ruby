@@ -159,10 +159,8 @@ class Ordinateur
 end
 ```
 
-Si on tape `ordi = Ordinateur.new`, un ordinateur avec `@h = 600` sera instancié et le message sera affiché. 
+Si on tape `ordi = Ordinateur.new`, un ordinateur avec `@h = 600` sera instancié et le message sera affiché. Si on tape `ordi = Ordinateur.new(h = 800)`, le message sera aussi affiché, mais on aura pour cet ordinateur `@h = 800`.
 
-Si on tape `ordi = Ordinateur.new(h = 800)`, le message sera aussi affiché, mais on aura pour cet ordinateur `@h = 800`.
-
-
+Nous voyons bien l'utilité de la méthode `initialize`.
 
 
