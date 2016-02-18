@@ -8,10 +8,10 @@ Pour info, un module se construit de cette façon.
 
 ``` ruby
 module Multiplication
-  CONSTANTE = 2
+  MAX = 10
   
   def Multiplication.table x
-    print "On a demandé la table de 2"
+    puts "On a demandé la table de #{ x }."
   end
 end
 ```
@@ -24,6 +24,36 @@ Ici, nous avons défini la constante `CONSTANTE` et la fonction `table`. Les con
 | Nous avons un niveau d’indentation dans notre module. C’est une bonne pratique qui facilite la relecture.
 
 # Utiliser un module 
+
+Utiliser un module n’est pas très compliqué. Pour utiliser une fonction d’un module, on écrit `nom_module.nom_fonction`. Par exemple, pour utiliser la fonction `table` du module `Multiplication` défini précédemment, nous allons utiliser ce code.
+
+```ruby
+print Mutltiplication.table 2
+```
+
+Bien sûr, le module doit avoir déjà été défini précédemment.
+
+Nous pouvons aussi accéder aux constantes du module. Pour cela, nous devons utiliser la syntaxe `nom_module.NOM_CONSTANTE`. Ainsi, pour accéder à la constante définie dans notre code précédent, nous allons utiliser ce code.
+
+```ruby
+print Multiplication::MAX
+```
+
+Notons que cette syntaxe fonctionne également pour utiliser les fonctions du module. Nous pouvons donc écrire `nom_module::nom_fonction`. (en revanche, nous ne pouvons pas écrire `nom_module.NOM_CONSTANTE` sous peine d’obtenir une erreur). Cependant, pour bien identifier les appels aux fonctions et les utilisations des constantes, nous allons privilégier l’écriture `nom_module.nom_fonction`. 
+
+```ruby
+module Multiplication
+  MAX = 10
+  
+  def Multiplication.table x
+    puts "On a demandé la table de #{ x }." if x <= M
+  end
+end
+
+puts "le maximum est #{ Multiplication::MAX }"
+Multiplication.table 3                          # Bonne écriture.
+Multiplication::table 3                         # Écriture déconseillée.
+```
 
 
 # Mettre un module dans un fichier séparé
