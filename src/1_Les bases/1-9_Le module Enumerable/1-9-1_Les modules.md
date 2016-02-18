@@ -23,6 +23,32 @@ Ici, nous avons défini la constante `CONSTANTE` et la fonction `table`. Les con
 [[information]]
 | Nous avons un niveau d’indentation dans notre module. C’est une bonne pratique qui facilite la relecture.
 
+Le nom du module peut être remplacé par le mot-clé `self`, qui signifie « soi », dans la définition de ses fonctions. Ainsi, nous pouvons écrire ceci.
+
+```ruby
+def self.table x
+  puts "On a demandé la table de #{ x }."
+end
+```
+
+Dans une fonction d’un module, nous pouvons faire appel à d’autres fonctions du module et aux constantes du module. Pour utiliser la constante, il suffit d’écrire son nom et pour faire appel à une fonction, on écrit ``self.nom_fonction`.
+
+```ruby
+module Multiplication
+  MAX = 10
+  
+  def self.table x
+    puts "On a demandé la table de #{ x }."
+  end
+  
+  def self.présente 
+    puts "La constante MAX de ce module vaut #{ MAX }."
+    puts "Essayons Multiplication.table 3."
+    self.table 3
+  end
+end
+```
+
 # Utiliser un module 
 
 Utiliser un module n’est pas très compliqué. Pour utiliser une fonction d’un module, on écrit `nom_module.nom_fonction`. Par exemple, pour utiliser la fonction `table` du module `Multiplication` défini précédemment, nous allons utiliser ce code.
@@ -32,6 +58,9 @@ print Mutltiplication.table 2
 ```
 
 Bien sûr, le module doit avoir déjà été défini précédemment.
+
+[[attention]]
+| Nous ne pouvons pas utiliser le mot-clé `self` ici car Ruby ne saurait alors pas à quel module il se rapporte. Le nom du module est donc obligatoire.
 
 Nous pouvons aussi accéder aux constantes du module. Pour cela, nous devons utiliser la syntaxe `nom_module.NOM_CONSTANTE`. Ainsi, pour accéder à la constante définie dans notre code précédent, nous allons utiliser ce code.
 
@@ -45,7 +74,8 @@ Notons que cette syntaxe fonctionne également pour utiliser les fonctions du mo
 module Multiplication
   MAX = 10
   
-  def Multiplication.table x
+  module_function
+  def self.table x
     puts "On a demandé la table de #{ x }." if x <= M
   end
 end
@@ -54,7 +84,6 @@ puts "le maximum est #{ Multiplication::MAX }"
 Multiplication.table 3                          # Bonne écriture.
 Multiplication::table 3                         # Écriture déconseillée.
 ```
-
 
 # Mettre un module dans un fichier séparé
 
