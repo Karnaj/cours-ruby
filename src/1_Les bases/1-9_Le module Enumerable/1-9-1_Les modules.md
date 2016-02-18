@@ -2,9 +2,9 @@
 
 Un module est un genre de structure regroupant à la fois des variables et des méthodes. Cependant, **un module n'est pas une variable**. En effet, un tableau contient lui aussi des variables et des méthodes, mais ce n'est pas pour autant un module.
 
-Un module permet de partager du code avec d'autre structure du langage, comme d'autres modules, ou encore des *classes* (mais nous aborderons ces choses la dans la prochaine partie). Cela permet de réduire le nombre de ligne de code à écrire, et de coller au principe *DRY*. En effet, il n'est pas utile de réécrire deux fois la même fonction ! On peut alors réunir dans un module des variables et des méthodes qui ont un lien et ensuite utiliser ce module dans plusieurs programmes. On peut par exemple imaginer un module mathématique contenant des fonctions trigonométriques et divers outils mathématiques.
+Un module permet de partager du code avec d'autres structures du langage, comme d'autres modules, ou encore des *classes* (mais nous aborderons ces choses la dans la prochaine partie). Cela permet de réduire le nombre de ligne de code à écrire, et de coller au principe *DRY*. En effet, il n'est pas utile de réécrire deux fois la même fonction ! On peut alors réunir dans un module des variables et des méthodes qui ont un lien et ensuite utiliser ce module dans plusieurs programmes. On peut par exemple imaginer un module mathématique contenant des fonctions trigonométriques et divers outils mathématiques.
 
-Pour info, un module se construit de cette façon.
+Un module se construit de cette façon.
 
 ``` ruby
 module Multiplication
@@ -48,6 +48,8 @@ module Multiplication
   end
 end
 ```
+
+Utiliser le mot-clé `self` plutôt que le nom du module est une bonne habitude. Elle permet par exemple de pouvoir changer le nom du module sans se faire de souci.
 
 # Utiliser un module 
 
