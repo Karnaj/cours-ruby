@@ -31,7 +31,7 @@ def self.table x
 end
 ```
 
-Dans une fonction d’un module, nous pouvons faire appel à d’autres fonctions du module et aux constantes du module. Pour utiliser la constante, il suffit d’écrire son nom et pour faire appel à une fonction, on écrit ``self.nom_fonction`.
+Dans une fonction d’un module, nous pouvons faire appel à d’autres fonctions du module et aux constantes du module. Pour utiliser la constante, il suffit d’écrire son nom et pour faire appel à une fonction, on écrit `self.nom_fonction`.
 
 ```ruby
 module Multiplication
