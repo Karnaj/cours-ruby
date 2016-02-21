@@ -16,7 +16,7 @@ module Multiplication
 end
 ```
 
-Un module commence par le mot-clé `module` et se finit par le mot-clé `end`. Après le mot-clé `module`, on écrit le nom du module (ici `Multiplication`). Ce nom doit commencer par une majuscule sinon nous obtiendrons l’erreur « class/module name must be CONSTANT ». Ensuite, on va à la ligne et on écrit comme dans un fichier normal.
+Un module commence par le mot-clé `module` et se finit par le mot-clé `end`. Après le mot-clé `module`, on écrit le nom du module (ici `Multiplication`). Ce nom doit commencer par une majuscule sinon nous obtiendrons l’erreur « class/module name must be CONSTANT ». De plus, il est conseillé d’écrire le noms des modules en [« CamElCase »](https://fr.wikipedia.org/wiki/CamelCase), c’est-à-dire en mettant en majuscule la première lettre de chaque mot (`ExempleDeModule` plutôt que `exemple_DeModule`). Ensuite, on va à la ligne et on écrit comme dans un fichier normal. 
 
 Ici, nous avons défini la constante `CONSTANTE` et la fonction `table`. Les constantes des modules sont nommés comme d’habitude, c’est-à-dire avec le première lettre en majuscule. Cependant, pour définir la fonction `table`, nous avons écrit `Multiplication.table` et pas `table`. Cela s’explique par le fait qu’il faut que Ruby sache que nous sommes en train de définir une fonction du module `Multiplication`. `Multiplication.table` peut alors se lire « la fonction `table` du module `Multiplication` ». Finalement, pour écrire une fonction dans un module, nous écrirons `def nom_du_module.nom_de_la_fonction`.
 
@@ -78,7 +78,7 @@ module Multiplication
   
   module_function
   def self.table x
-    puts "On a demandé la table de #{ x }." if x <= M
+    puts "On a demandé la table de #{ x }." if x <= MAX
   end
 end
 
@@ -88,5 +88,36 @@ Multiplication::table 3                         # Écriture déconseillée.
 ```
 
 # Mettre un module dans un fichier séparé
+
+Nous avons dit que le but d’un module était de ne pas avoir à réécrire plusieurs fois le même code et de pouvoir utiliser le même module dans plusieurs programmes. Cependant, pour le moment, nous avons toujours écrit le module dans le même fichier que notre programme, ce qui signifie qu’il faudra le recopier chaque fois que nous voudrons l’utiliser. Or, c’est justement ce que nous voulons éviter.
+
+En fait, ce qu’il nous faudrait, c’est pouvoir écrire le module dans un autre fichier. Ainsi, on pourrait utiliser ce même fichier dans plusieurs projets.
+
+Ceci est possible grâce à la fonction `require_relative` qui nous permet d’indiquer qu’un fichier ruby requiert un autre fichier ruby. En l’utilisant, nous pourrions écrire notre module `Multiplication` dans un fichier `multiplication.rb`. 
+
+```ruby
+module Multiplication
+  MAX = 10
+  
+  module_function
+  def self.table x
+    puts "On a demandé la table de #{ x }." if x <= MAX
+  end
+end
+```
+
+Ensuite, dans notre fichier principal, disons `main.rb`, nous allons indiquer qu’il a besoin de `multiplication.rb`.
+
+```ruby
+require_relative 'multiplication.rb'
+
+puts "le maximum est #{ Multiplication::MAX }"
+Multiplication.table 3 
+```
+
+Notons qu’avec ce code, le fichier `multiplication.rb` doit être placé dans le même dossier. En effet, le paramètre de `require_relative` est le chemin relatif du fichier requis. Si nous voulions placer notre fichier `multiplication.rb` dans un dossier `module`, il faudrait alors écrire `require_relative 'module/multiplication.rb'`. Notons de plus que l’extension du fichier n’est pas obligatoire et qu’il est parfaitement possible d’écrire `require 'multiplication'`.
+
+## Conventions de nommage pour les dossiers et les fichiers
+
 
 *[DRY]: Don’t Repeat Yourself
