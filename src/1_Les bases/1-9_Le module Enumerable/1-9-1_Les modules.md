@@ -119,5 +119,11 @@ Notons qu’avec ce code, le fichier `multiplication.rb` doit être placé dans 
 
 ## Conventions de nommage pour les dossiers et les fichiers
 
+De même que pour les noms de variables et de modules, il y a des conventions de nommage pour les noms de fichiers et de dossiers. Elles ne sont pas compliquées et les suivre ne devrait pas nous poser de problèmes. Les voici :
+
+- il est conseillé d’écrire les noms des fichiers en « snake_case » ;
+- il est conseillé d’écrire les noms des dossiers en « snake_case » ;
+
+Il est également conseillé d’avoir un seul module par fichier et de nommer ce fichier par le nom du module (en « snake_case » pour rester en cohérence avec la règle sur les noms des fichiers). Ainsi, nous avons le module `Multiplication` dans le fichier `multiplication.rb`.
 
 *[DRY]: Don’t Repeat Yourself
