@@ -1,4 +1,4 @@
-# Le module `Enumerable`
+Maintenant, nous savons comment créer des modules. Cependant, la création de module n’est pas l’objet principal de ce chapitre. L’objet principal de ce chapitre est un module en particulier, le module `Enumerable`.
 
 Comme son nom le suggère, ce module semble permettre *d'énumérer*. Mais il n'en n'est rien.
 En fait, ce module est destiné aux éléments qui savent déjà comment énumérer leur contenu. 
