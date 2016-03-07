@@ -10,7 +10,7 @@ Par exemple, nous savons parcourir un tableau grâce à la méthode `each`. Un p
 end
 ```
 
-Et c'est justement cette méthode qui va servir au module `Enumerable`. Nous allons voir que cette seule méthode permet de faire des tas de choses ! Il sufit de voir [la liste des fonctionnalités du module](http://ruby-doc.org/core-2.2.2/Enumerable.html). 
+Et c'est justement cette méthode qui va servir au module `Enumerable`. Nous allons voir que cette seule méthode permet de faire des tas de choses ! Il sufit de voir [la liste des fonctionnalités du module](http://ruby-doc.org/core-2.2.2/Enumerable.html). Grâce à lui, nous pouvons faire des opérations de recherche, de tri, de comptage, etc. Par exemple, il nous permet de connaître les éléments d’un tableau qui satisfont une condition.
 
 [[info]]
 | Dans la suite, nous traiterons uniquement des tableaux. Mais ce que nous verrons sera aussi valable pour les hachages, pour les chaines de caractères ou encore pour les intervalles.
