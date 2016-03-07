@@ -1,22 +1,19 @@
 Maintenant, nous savons comment créer des modules. Cependant, la création de module n’est pas l’objet principal de ce chapitre. L’objet principal de ce chapitre est un module en particulier, le module `Enumerable`.
 
-Comme son nom le suggère, ce module semble permettre *d'énumérer*. Mais il n'en n'est rien.
-En fait, ce module est destiné aux éléments qui savent déjà comment énumérer leur contenu. 
-C'est le cas des tableaux, des hash, des chaines de caractères ou encore des intervals.
+Comme son nom le suggère, ce module semble permettre *d'énumérer*. Mais il n'en n'est rien. En fait, ce module est destiné aux éléments qui savent déjà comment énumérer leur contenu. C'est le cas des tableaux, des hachages, des chaînes de caractères ou encore des intervalles.
 
 Par exemple, nous savons parcourir un tableau grâce à la méthode `each`. Un petite piqûre de rappel :
 
-``` ruby
+```ruby
 [1, 2, 3, 4, 5].each do |i|
   # ...
 end
 ```
 
-Et c'est justement cette méthode qui va servir au module `Enumerable`. Nous allons voir que cette seule méthode permet de faire des 
-tas de choses ! Il sufit de voir [la liste des fonctionnalités du module](http://ruby-doc.org/core-2.2.2/Enumerable.html)
+Et c'est justement cette méthode qui va servir au module `Enumerable`. Nous allons voir que cette seule méthode permet de faire des tas de choses ! Il sufit de voir [la liste des fonctionnalités du module](http://ruby-doc.org/core-2.2.2/Enumerable.html). 
 
 [[info]]
-| Dans la suite, je parlerais uniquement de tableau. Mais ce sera aussi valable pour les hash, chaines de caractères ou intervals.
+| Dans la suite, nous traiterons uniquement des tableaux. Mais ce que nous verrons sera aussi valable pour les hachages, pour les chaines de caractères ou encore pour les intervalles.
 
 
 ## La méthode `all?`
@@ -44,6 +41,24 @@ Autrement dit, si le tableau ne contient ni `false`, ni `nil`, `all?` retourne `
 [5, "salut"].all? # => true
 ```
 
+## La méthode `none?`
+
+ Cette méthode est la complémentaire de `all?`. Elle renvoie `true` si aucun élément ne satisfait le critère donné.
+ 
+``` ruby
+enumerable = [1, 2, 3]
+
+enumerable.none? { |e| e.even? } # => false 
+enumerable.none? { |e| e > 5 } # => true 
+``` 
+
+Si rien n'est passé à la méthode, elle retourne vrai uniquement si le tableau ne contient que `false` ou `nil`
+
+``` ruby
+[false, nil].none? # => true
+[true, nil].none? # => false
+```
+
 
 ## La méthode `any?`
 
@@ -61,6 +76,26 @@ is_even # => true
 ```
 
 Puisque **2** est pair, le critère est validé.
+
+## La méthode `one?`
+
+Cette méthode est le complémentaire de `any?`. Elle retourne `true` si un, et seulement un, élément est égal à celui passé en paramètre.
+Si la méthode ne reçoit aucun paramètre, alors elle retourne `vrai` si un seul élément est évalué à `true`.
+
+``` ruby
+enumerable = [1, 2, 3]
+
+enumerable.one? # => false
+enumerable.one?(1) # => true
+
+
+enumerable2 = [1, 1, true]
+
+enumerable2.one? # => false (car 1 est évalué à vrai)
+enumerable2.one?(1) # => false
+
+[false, nil, true].one? # => true
+```
 
 
 ## La méthode `collect`
@@ -222,44 +257,6 @@ enumerable.max(2) # => [2, 3]
 enumerable.min # => 1
 
 enumerable.minmax # => [1, 3]
-```
-
-## La méthode `none?`
-
- Cette méthode est la complémentaire de `all?`. Elle renvoie `true` si aucun élément ne satisfait le critère donné.
- 
-``` ruby
-enumerable = [1, 2, 3]
-
-enumerable.none? { |e| e.even? } # => false 
-enumerable.none? { |e| e > 5 } # => true 
-``` 
-
-Si rien n'est passé à la méthode, elle retourne vrai uniquement si le tableau ne contient que `false` ou `nil`
-
-``` ruby
-[false, nil].none? # => true
-[true, nil].none? # => false
-```
-
-## La méthode `one?`
-
-Cette méthode est le complémentaire de `any?`. Elle retourne `true` si un, et seulement un, élément est égal à celui passé en paramètre.
-Si la méthode ne reçoit aucun paramètre, alors elle retourne `vrai` si un seul élément est évalué à `true`.
-
-``` ruby
-enumerable = [1, 2, 3]
-
-enumerable.one? # => false
-enumerable.one?(1) # => true
-
-
-enumerable2 = [1, 1, true]
-
-enumerable2.one? # => false (car 1 est évalué à vrai)
-enumerable2.one?(1) # => false
-
-[false, nil, true].one? # => true
 ```
 
 ## La méthode `reject`
