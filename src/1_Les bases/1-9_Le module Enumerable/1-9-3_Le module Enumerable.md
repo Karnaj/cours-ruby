@@ -18,28 +18,31 @@ Et c'est justement cette méthode qui va servir au module `Enumerable`. Nous all
 
 ## La méthode `all?`
 
-Cette méthode permet de vérifier si tout les éléments d'un tableau correspondent à un critaire donné.
+Cette méthode permet de vérifier si tout les éléments d'un tableau correspondent à un critaire donné. Elle s’utilise de cette manière. 
 
 ``` ruby
 enumerable = [1, 2, 3]
 
 is_even = enumerable.all? do |e|
-	e.even?
+            e % 2 == 0
 end
 
-is_even # => false
+print is_even # => false
 ```
 
-Ici nous testons la parité des éléments de notre tableau. Puisqu'ils ne sont pas tous pair, `all?` retourne `false`
+Ici nous testons la parité des éléments de notre tableau. Puisqu'ils ne sont pas tous pair, `all?` retourne `false`.
 
+Nous devons mettre la condition testée dans un bloc. En fait, on peut comprendre la syntaxe de cette manière : pour chaque élément `e` de `enumerable`, tester la condition `e % 2 == 0`. Si cette condition est toujours vraie, retourner `true`, sinon retourner `false`.
 
-Si rien n'est passé à la méthode, elle retourne `true` uniquement si tous les éléments du tableau sont évalués à `true`.
-Autrement dit, si le tableau ne contient ni `false`, ni `nil`, `all?` retourne `true`
+Si rien n'est passé à la méthode (c’est-à-dire aucun bloc de code, elle retourne `true` uniquement si tous les éléments du tableau sont évalués à `true`. Autrement dit, si le tableau ne contient ni `false`, ni `nil`, `all?` retourne `true`
 
 ``` ruby
 [1, nil].all? # => false
 [5, "salut"].all? # => true
 ```
+
+[[information]]
+| La méthode `even` permet également de savoir si un entier est pair. Ainsi, `2.even` retourne `true`.
 
 ## La méthode `none?`
 
