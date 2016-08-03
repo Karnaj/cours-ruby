@@ -1,0 +1,29 @@
+\section{Qu’est-ce que Ruby ?}
+
+Avant de nous lancer dans cette grande aventure qu’est l’apprentissage de Ruby, nous devons déjà savoir ce qu’est Ruby.
+
+Pour commencer, Ruby est un langage de programmation.
+
+\begin{Question}
+ Mais au fait, qu’est-ce qu’un langage de programmation ? 
+\end{Question}
+
+En lisant ce \href{https://zestedesavoir.com/tutoriels/531/les-bases-de-la-programmation/}{tutoriel}, nous avons une réponse à cette question.  
+Pour résumer, un \textbf{langage de programmation} est un langage destiné à écrire des \textbf{programmes informatiques}.
+
+Il existe deux grandes catégories de langages :
+
+\begin{itemize}
+\item avec les \textbf{langages compilés}, le code que nous écrivons passe par un compilateur et ce compilateur génère un \textbf{exécutable} qui peut ensuite être exécuté par notre ordinateur ;
+\item avec les \textbf{langages interprétés}, le code que nous écrivons doit être lancé dans ce que l’on appelle une \textbf{machine virtuelle}, il n’y a pas d’exécutable de créé.
+\end{itemize}
+
+Ruby est un langage interprété. Nous aurons donc besoin d’une machine virtuelle pour l’exécuter. Sans elle, les programmes ne fonctionneront pas. Cela signifie également que si nous voulons distribuer un programme écrit en Ruby, il faudra que les personnes qui utilisent notre programme aient cette machine virtuelle d’installée (cette machine virtuelle \textbf{est} en fait Ruby). Ils devront donc télécharger et installer Ruby (ou nous devrons distribuer Ruby avec notre programme).
+
+Cette distribution est possible parce que Ruby est également un langage (et un logiciel) libre. Nous n’allons pas être longs sur ce point (pour plus d’informations, voir la \href{https://fr.wikipedia.org/wiki/Licence_publique_générale_GNU#Les_termes}{licence GPL}), mais retenons en gros que nous pouvons utiliser et redistribuer Ruby gratuitement et même créer des programmes payants avec.
+
+Ruby est un langage complet et permet de faire beaucoup de choses (on peut par exemple travailler sur un site Web en utilisant \textit{Ruby On Rails}). De plus, il permet de faire les choses de plusieurs manières différentes. C’est l’une de ses forces, mais paradoxalement, c’est aussi l’une des choses qui lui sont parfois reprochées : on peut faire les choses de plusieurs manières différentes, quelle méthode faut-il alors utiliser ?
+
+En tout cas, il reste un langage pratique, facile à utiliser et il est même portable. Nous pourrons donc l’utiliser sur différents systèmes.
+
+
