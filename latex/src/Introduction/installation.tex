@@ -1,0 +1,43 @@
+\section{Installation}
+
+Avant de coder en Ruby, il va de soi qu’il faut l’installer. Heureusement, nous allons voir pas à pas comment faire.
+
+\begin{Information}
+Il y a plusieurs façons d’installer Ruby. Elles sont détaillées sur \href{https://www.ruby-lang.org/fr/downloads/}{cette page}. Nous allons voir la méthode la plus simple.
+\end{Information}
+
+\subsection{Installation sous Windows}
+
+Pour commencer, téléchargeons la dernière version de RubyInstaller sur \href{https://www.ruby-lang.org/fr/downloads/}{cette page}.
+
+Figure : Capture du site.
+
+Ensuite, il nous suffit d’exécuter l’installateur téléchargé.  
+Il nous faut cliquer sur « Suivant » → « Suivant » → « Installer » en prenant soin de cocher les cases comme ci-dessous.
+
+Figure : Exécutable.
+
+Pour vérifier que Ruby est bien installé, nous pouvons utiliser la console. Ouvrons l’application « Invite de commande » et tapons \codeinline|ruby -v| avant de valider en appuyant sur ||Entrée||. Nous sommes censés obtenir le numéro de la version de Ruby qui est installée.
+ 
+\subsection{Installation sous Linux}
+
+Ruby est déjà installé sur certaines distributions. Pour savoir s’il est déjà installé, nous pouvons utiliser la commande \codeinline`ruby`. Pour cela, il faut ouvrir un terminal (généralement le terminal est l’application « Konsole » ou encore « Terminal »). Après l’avoir ouvert, tapons \codeinline`ruby` avant de valider en appuyant sur ||Entrée||.
+
+Si la commande ne renvoie pas d’erreur, alors Ruby est installé (Notons également la commande \codeinline|ruby -v| qui renvoie le numéro de version). 
+
+Si Ruby n’est pas encore installé, le plus simple est d'utiliser notre gestionnaire de paquets pour l'installer. Nous pouvons utiliser un gestionnaire de paquets graphiques ou en ligne de commandes au choix. 
+
+\begin{codelisting}[language = bash]
+$ sudo apt-get install ruby-full # Sous Ubuntu, Linux Mint, Debian, etc.
+$ sudo pacman -S ruby            # Sous Arch Linux.
+\end{codelisting}
+
+\subsection{Installation sous OS X}
+
+Nous avons de la chance, depuis quelques versions, Ruby est installé de base sur OS X. Nous n’avons donc rien à faire.  
+Lançons quand même la commande \codeinline`ruby -v` dans notre terminal pour connaître la version qui est installée. Pour cela, ouvrons le terminal (il s’agit de l’application « Terminal.App »), tapons \codeinline|ruby -v| et validons en appuyant sur ||Entrée||. Nous obtenons le numéro de la version de Ruby qui est installée.
+
+{\color{gray}\rule{\textwidth}{0.2pt}}
+
+Ruby est maintenant installé sur notre ordinateur. Il nous faut maintenant apprendre à l’utiliser.
+
